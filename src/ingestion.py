@@ -1,17 +1,8 @@
-import fitz
-from pathlib import Path
+import pymupdf
 
 
 def extract_text_from_pdf(file_path):
-    """
-    Extract text from every page of a PDF.
-
-    Returns:
-        list: A list of dictionaries containing
-              page number and extracted text.
-    """
-
-    document = fitz.open(file_path)
+    document = pymupdf.open(file_path)
 
     pages = []
 
